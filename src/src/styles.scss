@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+// https://github.com/metafizzy/flickity/issues/754
+@import "~flickity/css/flickity.css";
+
+// Import Lato Google Font
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+// Update Bulma's global variables
+$family-sans-serif: "Lato", sans-serif;
+$family-serif: "EB Garamond", serif;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// More theme colors could be added here...
+$primary: #1c1c1c;
+
+$spaces: (
+  "0": 0,
+  "1": 1.65rem,
+  "2": 1.75rem,
+);
+
+$margin-default: map-get($spaces, "2") map-get($spaces, "0");
+
+// Update some of Bulma's component & color variables
+$footer-padding: 3rem 1.5rem;
+$link: hsl(171, 100%, 41%);
+
+// Custom Styles
+.card-gap {
+  margin-top: 1.75rem;
+}
+.modal-trigger {
+  cursor: pointer;
+}
+a.icon > strong {
+  margin-left: 0.25rem;
+}
+.modal-card-body div.content {
+  margin: $margin-default;
+}
+
+// import everything - alternatively import just what you need: https://bulma.io/documentation/overview/modular/
+@import "~bulma/bulma";
+
+// override specific bulma styles
+.section {
+  padding: 2.15rem 1.5rem;
+}
+
+@function theme-color($key: "primary") {
+  @return map-get($theme-colors, $key);
+}
+
+// Flickity - begin
+.carousel-cell {
+  width: 100%;
+}
+// Flickity - end
+
+.image img.is-rounded {
+  object-fit: cover;
+  aspect-ratio: 1/1; // Forces a square aspect ratio
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.media-left {
+  .image.is-horizontal-logo {
+    width: 84px; // Make container wider
+    height: 42px; // Keep height the same
+
+    img {
+      object-fit: contain; // This will maintain aspect ratio
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// Optional: Add some margin to the right of the logo
+.media-left {
+  margin-right: 1.5rem;
+}
+
+.font-family-serif {
+  font-family: $family-serif;
+}
+
+.is-font-size-5 {
+  font-size: 1.2em;
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: none;
+  //   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+// Add these to your custom styles section
+.navbar {
+  .navbar-menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // Optional: Add some spacing between items
+  .navbar-item {
+    padding: 0.5rem 1rem;
+  }
+}
+
+// Replace your existing .media-left styles with these
+.media-left {
+  width: 120px; // Fixed width for all logo containers
+  min-width: 120px; // Prevent shrinking
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+
+  .image {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      object-fit: contain;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  // Remove any specific size classes from images
+  .image.is-48x48,
+  .image.is-horizontal-logo {
+    width: 100%;
+    height: 48px;
+  }
+}
+.hr-sm {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-sm {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
