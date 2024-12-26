@@ -12,40 +12,31 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="container">
         <div class="navbar-menu is-active">
-          <div class="navbar-end">
-            <div class="navbar-item mr-0">
-              <a
-                href="https://github.com/czaacza"
-                target="_blank"
-                class="icon is-large has-text-dark"
-              >
-                <i class="fab fa-2x fa-github"></i>
-              </a>
-            </div>
-            <div class="navbar-item ml-0">
-              <a
-                href="https://www.linkedin.com/in/mateusz--czarnecki"
-                target="_blank"
-                class="icon is-large has-text-dark"
-              >
-                <i class="fab fa-2x fa-linkedin"></i>
-              </a>
-            </div>
-            <div class="navbar-item ml-5">
-              <a
-                href="https://github.com/czaacza/cv"
-                target="_blank"
-                class="icon is-large has-text-dark"
-              >
-                <i class="fas fa-file-word"></i> <strong>Resume</strong>
-              </a>
-            </div>
+          <div class="navbar-start">
+            <a href="#about" class="navbar-item has-text-uppercase is-size-7 has-text-weight-medium">
+              About me
+            </a>
+            <a href="#experience" class="navbar-item has-text-uppercase is-size-7 has-text-weight-medium">
+              Experience
+            </a>
+            <a href="#education" class="navbar-item has-text-uppercase is-size-7 has-text-weight-medium">
+              Education
+            </a>
+            <a href="#projects" class="navbar-item has-text-uppercase is-size-7 has-text-weight-medium">
+              Projects
+            </a>
+            <a href="#certifications" class="navbar-item has-text-uppercase is-size-7 has-text-weight-medium">
+              Certifications
+            </a>
+            <a href="#contact" class="navbar-item has-text-uppercase is-size-7 has-text-weight-medium">
+              Contact
+            </a>
           </div>
         </div>
       </div>
     </nav>
 
-    <section class="section section-sm">
+    <section class="section section-sm" id="about">
       <div class="container">
         <div class="columns is-vcentered is-0">
           <!-- Left column with image and name -->
@@ -61,7 +52,23 @@
 
           <!-- Right column with About Me -->
           <div class="column is-8">
-            <h1 class="title is-4 mb-0">About Me</h1>
+            <div class="is-flex is-justify-content-space-between is-align-items-center mb-2">
+              <h1 class="title is-4 mb-0">About Me</h1>
+              <div class="is-flex is-align-items-center">
+                <a href="mailto:czarnecki.mateusz.022@gmail.com" class="icon is-large has-text-dark mx-1">
+                  <i class="fa fa-2x fa-envelope"></i>
+                </a>
+                <a href="https://github.com/czaacza" target="_blank" class="icon is-large has-text-dark mx-1">
+                  <i class="fab fa-2x fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mateusz--czarnecki" target="_blank" class="icon is-large has-text-dark mx-1 mr-2">
+                  <i class="fab fa-2x fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/czaacza/cv" target="_blank" class="icon is-large has-text-dark ml-5 mr-5">
+                  <i class="fas fa-file-word"></i> <strong>Resume</strong>
+                </a>
+              </div>
+            </div>
             <hr class="hr-sm" />
             <p class="font-family-serif is-font-size-5">
               Programming enthusiast with a solid foundation in AI, software
@@ -76,7 +83,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="experience">
       <div class="container">
         <h1 class="title is-4">Experience</h1>
         <hr class="mb-0" />
@@ -129,13 +136,13 @@
                 </li>
               </ul>
               <div class="tags">
-                <span class="tag">typescript</span>
-                <span class="tag">web3.js</span>
-                <span class="tag">blockchain</span>
-                <span class="tag">solidity</span>
-                <span class="tag">java</span>
-                <span class="tag">jenkins</span>
-                <span class="tag">devops</span>
+                <span class="tag">Typescript</span>
+                <span class="tag">Web3.js</span>
+                <span class="tag">Blockchain</span>
+                <span class="tag">Solidity</span>
+                <span class="tag">Java</span>
+                <span class="tag">Jenkins</span>
+                <span class="tag">Devops</span>
               </div>
             </div>
           </div>
@@ -186,12 +193,12 @@
                 <li>Winner of the TSMC Intern Hackathon</li>
               </ul>
               <div class="tags">
-                <span class="tag">python</span>
-                <span class="tag">machine learning</span>
+                <span class="tag">Python</span>
+                <span class="tag">Machine Learning</span>
                 <span class="tag">LLM</span>
-                <span class="tag">image processing</span>
-                <span class="tag">ml ops</span>
-                <span class="tag">devops</span>
+                <span class="tag">Image Processing</span>
+                <span class="tag">ML Ops</span>
+                <span class="tag">Devops</span>
               </div>
             </div>
           </div>
@@ -234,12 +241,11 @@
                 </li>
               </ul>
               <div class="tags">
-                <span class="tag">python</span>
-                <span class="tag">machine learning</span>
-                <span class="tag">LLM</span>
-                <span class="tag">image processing</span>
-                <span class="tag">ml ops</span>
-                <span class="tag">devops</span>
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">Ethereum</span>
+                <span class="tag">IPFS</span>
+                <span class="tag">Blockchain</span>
               </div>
             </div>
           </div>
@@ -247,7 +253,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="education">
       <div class="container">
         <h1 class="title is-4">Education</h1>
         <hr class="hr-sm" />
@@ -328,7 +334,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="projects">
       <div class="container">
         <h1 class="title is-4">Projects</h1>
         <hr class="hr-sm" />
@@ -368,7 +374,7 @@
                 future.
               </p>
               <div class="tags">
-                <span class="tag">python</span>
+                <span class="tag">Python</span>
                 <span class="tag">ArcGIS</span>
                 <span class="tag">ArcPY</span>
                 <span class="tag">RabbitMQ</span>
@@ -466,12 +472,11 @@
                 </li>
               </ul>
               <div class="tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">Javscript</span>
+                <span class="tag">Blockchain</span>
+                <span class="tag">Ethereum</span>
                 <span class="tag">React.js</span>
-                <span class="tag">Wordpress</span>
-                <span class="tag">Woocommerce</span>
+                <span class="tag">Typescript</span>
+                <span class="tag">Foundry</span>
               </div>
             </div>
           </div>
@@ -483,7 +488,7 @@
                 <div
                   class="is-flex is-justify-content-space-between is-align-items-center"
                 >
-                  <div>
+                  <div class="mr-5">
                     <p class="title is-4">Path finder</p>
                     <p class="subtitle is-6">
                       JavaFX GUI application using Dijkstra and BFS algorithms
@@ -523,12 +528,122 @@
                 </li>
               </ul>
               <div class="tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">Javscript</span>
-                <span class="tag">React.js</span>
-                <span class="tag">Wordpress</span>
-                <span class="tag">Woocommerce</span>
+                <span class="tag">Java</span>
+                <span class="tag">JavaFX</span>
+                <span class="tag">Graph Searching Algorithms</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="certifications">
+      <div class="container">
+        <h1 class="title is-4">Certifications</h1>
+        <hr class="hr-sm" />
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <div
+                  class="is-flex is-justify-content-space-between is-align-items-center"
+                >
+                  <div>
+                    <p class="title is-4">IELTS Academic - Band Score 8.0</p>
+                    <p class="subtitle is-6">
+                      C1/C2 English language proficiency certification
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-gap">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <div
+                  class="is-flex is-justify-content-space-between is-align-items-center"
+                >
+                  <div>
+                    <p class="title is-4">Cisco CyberOps Associate</p>
+                    <p class="subtitle is-6">
+                      Essential cybersecurity skills, concepts, and technologies, including understanding IT infrastructure, operations, and vulnerabilities</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>       
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <h1 class="title is-4">Contact</h1>
+        <hr class="hr-sm" />
+        <div class="card">
+          <div class="card-content">
+            <div class="columns is-multiline">
+              <!-- Email -->
+              <div class="column is-half">
+                <div class="is-flex is-align-items-center">
+                  <span class="icon is-large has-text-dark mr-3">
+                    <i class="fa fa-2x fa-envelope"></i>
+                  </span>
+                  <div>
+                    <p class="subtitle is-6 mb-1">Email</p>
+                    <a href="mailto:czarnecki.mateusz.022@gmail.com" class="has-text-dark">
+                      czarnecki.mateusz.022@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- GitHub -->
+              <div class="column is-half">
+                <div class="is-flex is-align-items-center">
+                  <span class="icon is-large has-text-dark mr-3">
+                    <i class="fab fa-2x fa-github"></i>
+                  </span>
+                  <div>
+                    <p class="subtitle is-6 mb-1">GitHub</p>
+                    <a href="https://github.com/czaacza" target="_blank" class="has-text-dark">
+                      github.com/czaacza
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- LinkedIn -->
+              <div class="column is-half">
+                <div class="is-flex is-align-items-center">
+                  <span class="icon is-large has-text-dark mr-3">
+                    <i class="fab fa-2x fa-linkedin"></i>
+                  </span>
+                  <div>
+                    <p class="subtitle is-6 mb-1">LinkedIn</p>
+                    <a href="https://www.linkedin.com/in/mateusz--czarnecki" target="_blank" class="has-text-dark">
+                      linkedin.com/in/mateusz--czarnecki
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Resume -->
+              <div class="column is-half">
+                <div class="is-flex is-align-items-center">
+                  <span class="icon is-large has-text-dark mr-3">
+                    <i class="fas fa-2x fa-file-word"></i>
+                  </span>
+                  <div>
+                    <p class="subtitle is-6 mb-1">Resume</p>
+                    <a href="https://github.com/czaacza/cv" target="_blank" class="has-text-dark">
+                      github.com/czaacza/cv
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

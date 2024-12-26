@@ -125,6 +125,14 @@ a.icon > strong {
   }
 }
 
+.navbar {
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  min-height: 3rem;
+  position: relative; // Add this line
+  z-index: 1; // Add this line
+}
+
 // Replace your existing .media-left styles with these
 .media-left {
   width: 120px; // Fixed width for all logo containers
@@ -169,6 +177,7 @@ a.icon > strong {
 
 html {
   font-size: 14px; // Down from default 16px
+  scroll-behavior: smooth;
 }
 
 // Size adjustments
@@ -300,3 +309,44 @@ $container-max-width: 960px; // Adjust container width
 .container {
   max-width: 768px !important;
 }
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: none;
+  min-height: 3rem;
+  position: relative;
+  z-index: 1;
+
+  .navbar-menu {
+    justify-content: center;
+
+    .navbar-start {
+      margin: 0 auto;
+      justify-content: center;
+    }
+  }
+
+  .navbar-item {
+    color: $primary;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #000;
+      background-color: transparent !important;
+    }
+    &:focus,
+    &:active,
+    &:focus-within {
+      background-color: transparent !important;
+      color: $primary !important;
+    }
+  }
+}
+
+// body {
+//   padding-top: 3rem;
+//   scroll-behavior: smooth;
+// }

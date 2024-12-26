@@ -12,9 +12,29 @@ var $modals = getAll('.modal');
 var $modalTriggers = getAll('.modal-trigger');
 var $modalCloses = getAll('.modal-card-head .delete, .modal-card-foot .button');
 
+document.addEventListener('DOMContentLoaded',function() {
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach(link => {
+        link.addEventListener('click',function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+
 if ($modalTriggers.length > 0) {
-    $modalTriggers.forEach(function ($el) {
-        $el.addEventListener('click', function () {
+    $modalTriggers.forEach(function($el) {
+        $el.addEventListener('click',function() {
             var target = $el.dataset.target;
             openModal(target);
         });
@@ -22,8 +42,8 @@ if ($modalTriggers.length > 0) {
 }
 
 if ($modalCloses.length > 0) {
-    $modalCloses.forEach(function ($el) {
-        $el.addEventListener('click', function () {
+    $modalCloses.forEach(function($el) {
+        $el.addEventListener('click',function() {
             closeModals();
         });
     });
@@ -51,7 +71,7 @@ function openModal(target) {
 
 function closeModals() {
     rootEl.classList.remove('is-clipped');
-    $modals.forEach(function ($el) {
+    $modals.forEach(function($el) {
         $el.classList.remove('is-active');
     });
 }
@@ -59,12 +79,12 @@ function closeModals() {
 // Functions
 
 function initCarousel(id) {
-    return new Flickity('#' + id, {
+    return new Flickity('#' + id,{
         imagesLoaded: true,
         adaptiveHeight: true // https://github.com/metafizzy/flickity/issues/11
     });
 }
 
 function getAll(selector) {
-    return Array.prototype.slice.call(document.querySelectorAll(selector), 0);
+    return Array.prototype.slice.call(document.querySelectorAll(selector),0);
 }
